@@ -11,6 +11,7 @@
 |
 */
 
+//前台守护
 Route::group(['middleware' => 'web'], function () {
 
     Route::get('/', function () {
@@ -19,7 +20,19 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::auth();
     Route::get('/home', 'HomeController@index');
+
 });
+
+//后台守护
+Route::group(['prefix' => 'admin','middleware' => 'web'], function () {
+    Route::get('/', 'AdminController@index');
+    Route::get('login', 'Admin\AuthController@getLogin');
+    Route::post('login', 'Admin\AuthController@postLogin');
+    Route::get('register', 'Admin\AuthController@getRegister');
+    Route::post('register', 'Admin\AuthController@postRegister');
+    Route::get('logout', 'Admin\AuthController@logout');//getLogout方法不能调用，未知原因
+});
+
 
 /*
 |--------------------------------------------------------------------------

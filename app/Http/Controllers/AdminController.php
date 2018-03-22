@@ -10,6 +10,7 @@ use Auth;
 
 class AdminController extends Controller
 {
+    protected  $guard = "admin";
 
     public function __construct()
     {

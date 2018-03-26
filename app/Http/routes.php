@@ -33,7 +33,9 @@ Route::group(['prefix' => 'admin','middleware' => ['web']], function () {
     Route::get('logout', 'Admin\AuthController@logout');//getLogout方法不能调用，未知原因
 });
 
-
+Route::get('layui', function(){
+    return view('admin.layui');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes

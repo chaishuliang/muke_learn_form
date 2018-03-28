@@ -19,7 +19,7 @@
         <th lay-data="{align:'center'}" colspan="2">地址</th>
         <th lay-data="{field:'amount', width:150}" rowspan="2">金额</th>
 		<th lay-data="{width: 150, align: 'center', toolbar: '#barDemo'}" rowspan="2">操作</th>
-        
+
     </tr>
     <tr>
         <th lay-data="{field:'province',align:'center',width:100}">省</th>

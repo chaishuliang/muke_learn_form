@@ -54,6 +54,14 @@ Route::group(['middleware' => ['web','auth']], function () {
     Route::any('student/update/{id}', ['uses' => 'StudentController@update']);
     Route::any('student/detail/{id}', ['uses' => 'StudentController@detail']);
     Route::any('student/delete/{id}', ['uses' => 'StudentController@delete']);
+
+    /**
+     * 权限管理 -- role
+     */
+    //如有需补充的路由，添加到Route::resource之前
+    Route::resource('role',                     'RoleController');
+
+    Route::resource('permission',               'PermissionController');
 });
 
 /*

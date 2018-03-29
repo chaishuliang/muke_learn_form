@@ -60,6 +60,7 @@ Route::group(['middleware' => ['web','auth']], function () {
      * 权限管理 -- role
      */
     //如有需补充的路由，添加到Route::resource之前
+    // http://localhost:81/role/create
     Route::resource('role',                     'RoleController');
     Route::resource('permission',               'PermissionController');
 });

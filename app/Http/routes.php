@@ -31,10 +31,11 @@ Route::group(['prefix' => 'admin','middleware' => ['web']], function () {
     Route::get('register',  'Admin\AuthController@getRegister');
     Route::post('register', 'Admin\AuthController@postRegister');
     Route::get('logout',    'Admin\AuthController@logout');//getLogout方法不能调用，未知原因
-});
 
-Route::get('layui', function(){
-    return view('admin.layui');
+    //layui
+    Route::get('layui', function(){
+        return view('admin.layui');
+    });
 });
 /*
 |--------------------------------------------------------------------------
@@ -60,7 +61,6 @@ Route::group(['middleware' => ['web','auth']], function () {
      */
     //如有需补充的路由，添加到Route::resource之前
     Route::resource('role',                     'RoleController');
-
     Route::resource('permission',               'PermissionController');
 });
 

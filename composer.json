@@ -8,7 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "overtrue/laravel-lang": "~3.0",
-        "zizaco/entrust": "dev-master"
+        "zizaco/entrust":"dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
